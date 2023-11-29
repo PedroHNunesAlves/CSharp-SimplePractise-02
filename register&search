@@ -1,0 +1,44 @@
+using System;
+class HelloWorld {
+  static void Main() {
+    
+    string[,] cadastro = new string[5,2];
+    
+    for(int i = 0; i < 5; i++){
+        Console.Write($"Digite o nome do funcionário: ");
+        cadastro[i,0] = Console.ReadLine();
+        
+        Console.Write($"Digite o telefone do funcionário: ");
+        cadastro[i,1] = Console.ReadLine();
+        
+        Console.WriteLine("");
+    }
+    
+   string nome;
+   bool find = false;
+   
+   Console.WriteLine("");
+   Console.WriteLine("");
+   
+   Console.WriteLine("Digite o nome do funcionário: ");
+   nome = Console.ReadLine();
+   
+   for(int i = 0; i < 5; i++){
+       
+       if(nome == cadastro[i,0]){
+           find = true;
+           Console.WriteLine($"O telefone desse usuário é: {cadastro[i, 1]} ");
+       } 
+
+   }
+        if(!find){
+        Console.WriteLine("Usuário não cadastrado.");
+        }
+   
+   
+  }
+  
+  
+  
+  
+}
